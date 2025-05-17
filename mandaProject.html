@@ -8,7 +8,7 @@
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background-color: #0a1435; /* dark blue gelap */
+      background-color: #2A52BE;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -21,20 +21,9 @@
       padding: 30px 25px;
       border-radius: 15px;
       text-align: center;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
       overflow-y: auto;
       max-height: 90vh;
-
-      /* efek melayang */
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      /* initial position sedikit naik */
-      transform: translateY(-10px);
-    }
-
-    .container:hover {
-      /* saat hover container melayang lebih tinggi dan shadow lebih nyata */
-      transform: translateY(-20px);
-      box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
     }
 
     h2 {
