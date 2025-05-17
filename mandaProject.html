@@ -8,11 +8,25 @@
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-       background: linear-gradient(135deg, #3f5aa9, #6f8cd9, #a0c1ff);
+      height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
+      background: linear-gradient(135deg, #3f5aa9, #6f8cd9, #a0c1ff);
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Noise overlay untuk mengurangi banding warna */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      pointer-events: none;
+      background: url('https://www.transparenttextures.com/patterns/asfalt-light.png');
+      opacity: 0.08;
+      z-index: 0;
+      mix-blend-mode: overlay;
     }
 
     .container {
@@ -24,6 +38,8 @@
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
       overflow-y: auto;
       max-height: 90vh;
+      position: relative; /* supaya di atas noise */
+      z-index: 1;
     }
 
     h2 {
@@ -38,19 +54,19 @@
       margin: 0 0 20px;
     }
 
+    .info {
+      color: #1e3a8a;
+      font-weight: bold;
+      margin-bottom: 10px;
+      font-size: 16px;
+    }
+
     h3 {
       font-weight: normal;
       margin: 0 0 20px;
       font-size: 15px;
       color: #333;
       line-height: 1.5;
-    }
-
-    .info {
-      color: #1e3a8a;
-      font-weight: bold;
-      margin-bottom: 10px;
-      font-size: 16px;
     }
 
     a.button {
