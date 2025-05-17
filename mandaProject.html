@@ -8,7 +8,7 @@
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background-color: #1a2a4f;
+      background-color: #0a1435; /* dark blue gelap */
       display: flex;
       justify-content: center;
       align-items: center;
@@ -21,9 +21,20 @@
       padding: 30px 25px;
       border-radius: 15px;
       text-align: center;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
       overflow-y: auto;
       max-height: 90vh;
+
+      /* efek melayang */
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      /* initial position sedikit naik */
+      transform: translateY(-10px);
+    }
+
+    .container:hover {
+      /* saat hover container melayang lebih tinggi dan shadow lebih nyata */
+      transform: translateY(-20px);
+      box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
     }
 
     h2 {
@@ -55,24 +66,24 @@
 
     a.button {
       display: block;
-      width: 100%;
+      width: 70%;
       margin: 12px auto;
-      padding: 14px 20px;
-      font-size: 15px;
+      padding: 10px 16px;
+      font-size: 14px;
       font-weight: bold;
       background-color: #3f5aa9;
       border: 2px solid #f5deb3; /* cream gold */
       color: white;
       text-decoration: none;
-      border-radius: 10px;
+      border-radius: 8px;
       text-align: center;
       transition: all 0.3s ease;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     }
 
     a.button:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+      transform: translateY(-4px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
       background-color: #354e94;
     }
   </style>
@@ -108,4 +119,3 @@
   </div>
 </body>
 </html>
-
