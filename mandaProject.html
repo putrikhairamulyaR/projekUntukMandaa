@@ -8,14 +8,7 @@
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background-color: #a3c2f2;
-      background-image: repeating-linear-gradient(
-        45deg,
-        #cfe0f5,
-        #cfe0f5 100px,
-        transparent 100px,
-        transparent 200px
-      );
+      background: linear-gradient(to bottom right, #b3d1ff, #e0ecff); /* Gradasi biru */
       display: flex;
       justify-content: center;
       align-items: center;
@@ -23,14 +16,15 @@
     }
 
     .container {
-      background-color: #eaf1fb;
-      width: 300px;
-      padding: 20px;
-      border-radius: 10px;
+      background-color: #f6faff;
+      width: 320px;
+      padding: 25px;
+      border-radius: 15px;
       text-align: center;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
       overflow-y: auto;
       max-height: 90vh;
+      transition: transform 0.3s ease;
     }
 
     .logo {
@@ -40,7 +34,7 @@
 
     h2 {
       font-family: 'Georgia', serif;
-      font-size: 20px;
+      font-size: 22px;
       margin: 10px 0;
       color: #2b3a67;
     }
@@ -48,7 +42,8 @@
     h3 {
       font-weight: normal;
       margin-top: 0;
-      font-size: 16px;
+      font-size: 15px;
+      color: #444;
     }
 
     p {
@@ -60,28 +55,32 @@
     a.button {
       display: block;
       width: 80%;
-      margin: 10px auto;
-      padding: 10px;
+      margin: 12px auto;
+      padding: 12px;
       font-size: 14px;
-      background-color: transparent;
-      border: 1px solid #2b3a67;
+      background-color: white;
+      border: 1.5px solid #2b3a67;
       color: #2b3a67;
       text-decoration: none;
-      border-radius: 5px;
+      border-radius: 8px;
       text-align: center;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
     }
 
     a.button:hover {
-      background-color: #dce8f8;
+      transform: translateY(-3px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+      background-color: #e6f0ff;
     }
 
     .next-btn {
       margin-top: 20px;
       background-color: white;
-      border-radius: 20px;
+      border-radius: 25px;
       padding: 10px 15px;
       border: none;
-      box-shadow: 0 0 5px rgba(0,0,0,0.2);
+      box-shadow: 0 3px 6px rgba(0,0,0,0.1);
       cursor: pointer;
       color: #2b3a67;
       font-weight: bold;
@@ -89,10 +88,13 @@
       display: block;
       margin-left: auto;
       margin-right: auto;
+      transition: all 0.3s ease;
     }
 
     .next-btn:hover {
-      background-color: #eee;
+      background-color: #f0f8ff;
+      transform: translateY(-3px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
     }
   </style>
 </head>
@@ -110,16 +112,19 @@
     <a
       class="button"
       href="https://youtu.be/gUXcFI0PRas?si=wbXo5bP-FAHHRwNa"
+      target="_blank"
       >Video Kespo</a
     >
     <a
       class="button"
       href="https://www.canva.com/design/DAGnq-1kfso/0KdYpceR58OE0lypWZzWvg/edit?utm_content=DAGnq-1kfso&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
+      target="_blank"
       >Leaflet Kespo</a
     >
     <a
       class="button"
       href="https://www.canva.com/design/DAGnns1pZkA/OBIKm0KIIRpyoQmlNpXL1A/edit?utm_content=DAGnns1pZkA&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
+      target="_blank"
       >Leaflet Tanggap Anemia</a
     >
   </div>
